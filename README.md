@@ -63,14 +63,14 @@ Available snippets for *.c files
 ---
 
 asub_header:
-```
+```c
 #include <aSubRecord.h>
 #include <registryFunction.h>
 #include <epicsExport.h>
 ```
 
 asub_code:
-```
+```c
 static long my_asub_routine(aSubRecord *precord)
 {
   // insert code here
