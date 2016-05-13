@@ -17,7 +17,7 @@ apm install language-epics
 
 or find it in the Packages tab under Settings.
 
-Available snippets
+Available snippets for *.db files
 ---
 | Trigger       | Name                          | Body                                                                                              |
 | ------------- |---------------------------    | --------------------------------------------------------------------------------------------------|
@@ -59,4 +59,22 @@ Available snippets
 | waveform      | waveform record               | insert waveform record with fields: DESC, NELM, FTVL                                              |
 
 
+Available snippets for *.c files
+---
 
+asub_header:
+```
+#include <aSubRecord.h>
+#include <registryFunction.h>
+#include <epicsExport.h>
+```
+
+asub_code:
+```
+static long my_asub_routine(aSubRecord *precord)
+{
+  // insert code here
+  return 0;
+}
+epicsRegisterFunction(my_asub_routine);
+```
